@@ -17,6 +17,7 @@ function createWindow() {
 
 app.on('ready', createWindow)
 
+// Só finaliza a aplicação quando todas as paginas fecham se não for mac
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
