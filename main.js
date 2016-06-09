@@ -7,10 +7,6 @@ function createWindow() {
   win = new BrowserWindow({ width: 800, height: 600 })
   win.loadURL(`file://${__dirname}/index.html`)
 
-  win.webContents.on('did-finish-load', function() {
-    win.webContents.executeJavaScript("CodeMirror(document.body, {mode: 'javascript'});")
-  })
-
   win.focus()
   win.on('closed', () => win = null)
 }
