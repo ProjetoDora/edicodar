@@ -2,7 +2,7 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 const Codemirror = require('react-codemirror')
 
-const App = React.createClass({
+const Editor = React.createClass({
 	displayName: 'App',
 
 	getInitialState: function getInitialState() {
@@ -31,4 +31,4 @@ const App = React.createClass({
 	}
 })
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('app'))
+module.exports = Editor

@@ -9,9 +9,14 @@
     "react-dom": "^15.1.0"
   },
   "devDependencies": {
-    "electron-prebuilt": "^1.2.0"
+    "chai": "^3.5.0",
+    "electron-prebuilt": "^1.2.0",
+    "enzyme": "^2.3.0",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.1.0"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "test": "mocha"
   }
 }
