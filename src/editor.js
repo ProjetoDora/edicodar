@@ -2,20 +2,21 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 const Codemirror = require('react-codemirror')
 
-const Editor = React.createClass({
-	displayName: 'App',
-
-	getInitialState: function getInitialState() {
-		return {
+class Editor extends React.Component {
+	constructor (props) {
+    super(props)
+		this.state = {
 			code: 'Bem vindo ao Projeto Dora!'
 		}
-	},
-	updateCode: function updateCode(newCode) {
+	}
+
+	updateCode (newCode) {
 		this.setState({
 			code: newCode
 		})
-	},
-	render: function render() {
+	}
+
+	render () {
 		const options = {
       theme: 'material',
       lineNumbers: true,
@@ -28,6 +29,6 @@ const Editor = React.createClass({
         options={options} />
     )
 	}
-})
+}
 
 module.exports = Editor
