@@ -22,12 +22,11 @@ const Editor = React.createClass({
       autofocus: true,
       mode: 'javascript'
 		}
-		return React.createElement(
-      Codemirror, {
-        value: this.state.code,
-        onChange: this.updateCode,
-        options: options
-      })
+		return (
+      <Codemirror value={this.state.code}
+        onChange={this.updateCode}
+        options={options} />
+    )
 	}
 })
 

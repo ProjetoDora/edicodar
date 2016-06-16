@@ -9,14 +9,21 @@
     "react-dom": "^15.1.0"
   },
   "devDependencies": {
+    "babel-register": "^6.9.0",
     "chai": "^3.5.0",
-    "electron-prebuilt": "^1.2.0",
+    "electron-prebuilt": "^1.2.2",
     "enzyme": "^2.3.0",
+    "jsx-loader": "^0.13.2",
+    "minimist": "^1.2.0",
     "mocha": "^2.5.3",
-    "react-addons-test-utils": "^15.1.0"
+    "react-addons-test-utils": "^15.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
     "start": "electron .",
-    "test": "mocha"
+    "electron": "webpack && electron .",
+    "start-hot": "electron -r babel-register .",
+    "test": "mocha --compilers js:babel-register"
   }
 }
