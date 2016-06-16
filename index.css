@@ -1,9 +1,23 @@
 html,
 body,
 #app,
+#editor,
 .ReactCodeMirror,
 .CodeMirror {
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+.CodeMirror {
+  padding: 1em 0;
+}
+
+button {
+  position: absolute;
+  z-index: 100;
+  padding: 1em;
+  border-radius: 1.5em;
+  right: 5%;
+  top: 1%;
 }

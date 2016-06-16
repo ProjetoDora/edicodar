@@ -24,9 +24,12 @@ class Editor extends React.Component {
       mode: 'javascript'
 		}
 		return (
-      <Codemirror value={this.state.code}
-        onChange={this.updateCode}
-        options={options} />
+      <div id='editor'>
+        <Codemirror value={this.state.code}
+          onChange={this.updateCode}
+          options={options} />
+        <button>Rodar</button>
+      </div>
     )
 	}
 }
