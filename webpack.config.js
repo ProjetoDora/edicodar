@@ -14,17 +14,24 @@ let options = {
   },
   output: {
     path: path.join(__dirname, 'build'),
-    publicPath: path.join(__dirname, 'src'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'http://localhost:8080/build/'
+  },
+  devServer: {
+    hot: true,
+    publicPath: 'http://localhost:8080/build/'
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    packageMains: ['webpack', 'browser', 'web', 'browserify', ['jam', 'main'], 'main'],
+    packageMains: ['webpack', 'browser', 'web', 'browserify', ['jam', 'main'], 'main']
   },
-  entry: [
-    './src/index'
-  ],
-  debug: true
+  entry: {
+    app: ['webpack/hot/dev-server', './src/index.js']
+  },
+  debug: true,
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
 
 options.target = webpackTargetElectronRenderer(options);

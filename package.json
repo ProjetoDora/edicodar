@@ -21,9 +21,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "electron .",
-    "electron": "webpack && electron .",
-    "start-hot": "electron -r babel-register .",
+    "electron": "electron .",
+    "start": "webpack-dev-server | npm run electron",
     "test": "mocha --compilers js:babel-register"
   }
 }
